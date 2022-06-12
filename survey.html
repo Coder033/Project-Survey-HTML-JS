@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Personal information</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="username"> <br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="useremail"> <br><br>
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="usercontact"> <br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Product</legend>
+            <label>Satisfied with product</label>
+            Yes: <input type="radio" name="ir">
+            No: <input type="radio" name="ir">
+
+            <br><br>
+            <label for="product_review">How is product</label>
+            <select name="review" id="product_review">
+                <optgroup label="package review">
+                    <option value="1">Neat package</option>
+                    <option value="2">Need to be better</option>
+                    <option value="3">Not satisfied</option>
+                </optgroup>
+                <optgroup label="product review">
+                    <option value="1">Best in market</option>
+                    <option value="2">Good</option>
+                    <option value="3">Average</option>
+                </optgroup>
+            </select>
+            <br><br>
+            <label for="user_review">Detailed Review</label> <br>
+            <textarea name="u_review" id="user_review" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <input type="button" value="Click" name="submit" onclick="one();">
+        <button type="reset">Reset</button>
+    </form>
+
+    <script type="text/javascript">
+        function one(){
+            const name=document.getElementsByName('username')[0].value
+            const query='?name='+name
+            const redirectpage='./survey1.html'+query
+            window.location.href=redirectpage
+            
+        }
+
+    </script>
+</body>
+</html>
